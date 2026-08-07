@@ -6,7 +6,7 @@ const sendBtn = document.getElementById("sendBtn");
 const latestQuestion = document.getElementById("latestQuestion");
 
 // Paste your class Cloudflare Worker URL from the README here.
-const WORKER_URL = "https://loreal-chatbot.your-subdomain.workers.dev/";
+const WORKER_URL = "https://black-base-eb36.smetha1.workers.dev";
 
 // Use the model requested by the class project instructions.
 const MODEL_NAME = "gpt-4.1";
@@ -51,6 +51,11 @@ function setLoadingState(isLoading) {
 
 // Request an assistant reply from the class-hosted Worker.
 async function getAssistantReply() {
+  // Guard against the default placeholder URL before making a request.
+  if (!WORKER_URL || WORKER_URL.includes("your-subdomain")) {
+    throw new Error("Please add your real Cloudflare Worker URL in script.js.");
+  }
+
   const response = await fetch(WORKER_URL, {
     method: "POST",
     headers: {
