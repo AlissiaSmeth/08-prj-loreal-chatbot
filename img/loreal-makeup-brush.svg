@@ -1,0 +1,65 @@
+<svg width="640" height="420" viewBox="0 0 640 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="640" y2="420" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFDFB"/>
+      <stop offset="1" stop-color="#F6E8E2"/>
+    </linearGradient>
+    <radialGradient id="powder" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(494 122) rotate(124) scale(120 120)">
+      <stop stop-color="#F7C5D6" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#F7C5D6" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="bristleMain" x1="88" y1="18" x2="276" y2="176" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8DCC7"/>
+      <stop offset="0.5" stop-color="#E9B68D"/>
+      <stop offset="1" stop-color="#A5714D"/>
+    </linearGradient>
+    <linearGradient id="bristleTip" x1="122" y1="52" x2="231" y2="146" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF1E8"/>
+      <stop offset="1" stop-color="#DDAE87" stop-opacity="0.3"/>
+    </linearGradient>
+    <linearGradient id="ferrule" x1="145" y1="170" x2="312" y2="250" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E8D7CB"/>
+      <stop offset="0.5" stop-color="#9A8377"/>
+      <stop offset="1" stop-color="#F3E4D8"/>
+    </linearGradient>
+    <linearGradient id="handle" x1="286" y1="238" x2="534" y2="394" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2E2B2A"/>
+      <stop offset="0.5" stop-color="#6E635D"/>
+      <stop offset="1" stop-color="#1B1918"/>
+    </linearGradient>
+    <linearGradient id="handleShine" x1="302" y1="248" x2="496" y2="366" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF" stop-opacity="0.4"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="drop" x="32" y="52" width="582" height="324" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="14"/>
+      <feGaussianBlur stdDeviation="10"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.45 0 0 0 0 0.35 0 0 0 0 0.31 0 0 0 0.35 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_0_1"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_0_1" result="shape"/>
+    </filter>
+  </defs>
+
+  <rect width="640" height="420" rx="30" fill="url(#bg)"/>
+  <ellipse cx="120" cy="338" rx="106" ry="34" fill="#EBD8D1"/>
+  <circle cx="494" cy="122" r="122" fill="url(#powder)"/>
+
+  <g filter="url(#drop)" transform="translate(92,56) rotate(-21 236 148)">
+    <path d="M108 35C128 14 167 10 192 28L240 61C268 81 280 114 273 144L259 199C251 228 228 251 197 258L123 274C91 281 59 268 44 240L25 207C11 183 13 153 30 131L108 35Z" fill="url(#bristleMain)"/>
+    <path d="M122 54C138 39 166 38 184 52L224 84C245 101 254 127 250 151L242 184C237 206 220 223 198 230L136 247C113 254 89 245 77 226L63 202C53 187 55 167 68 153L122 54Z" fill="url(#bristleTip)"/>
+    <path d="M157 31C179 16 210 19 231 38" stroke="#FDEBDE" stroke-opacity="0.8" stroke-width="7" stroke-linecap="round"/>
+    <path d="M114 175L278 206C295 209 306 225 303 242L301 255C298 272 282 283 265 281L101 250C84 247 73 231 76 214L78 201C81 184 97 173 114 175Z" fill="url(#ferrule)"/>
+    <path d="M120 187L273 215" stroke="#FFFFFF" stroke-opacity="0.45" stroke-width="3" stroke-linecap="round"/>
+
+    <path d="M284 234H512C528 234 541 247 541 263V304C541 320 528 333 512 333H294C274 333 257 316 257 296V261C257 246 269 234 284 234Z" fill="url(#handle)"/>
+    <path d="M286 248H503C512 248 519 255 519 264V276C519 285 512 292 503 292H286V248Z" fill="url(#handleShine)"/>
+    <rect x="330" y="281" width="144" height="24" rx="12" fill="#B29E92" fill-opacity="0.35"/>
+    <text x="347" y="298" fill="#EDE3DD" font-family="Montserrat, Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="0.08em">L'OREAL</text>
+  </g>
+
+  <text x="32" y="386" fill="#8B6B61" font-family="Montserrat, Arial, sans-serif" font-size="25" font-weight="700">
+    Makeup Brush
+  </text>
+</svg>

@@ -3,6 +3,7 @@ const chatForm = document.getElementById("chatForm");
 const userInput = document.getElementById("userInput");
 const chatWindow = document.getElementById("chatWindow");
 const sendBtn = document.getElementById("sendBtn");
+const latestQuestion = document.getElementById("latestQuestion");
 
 // Paste your class Cloudflare Worker URL from the README here.
 const WORKER_URL = "https://loreal-chatbot.your-subdomain.workers.dev/";
@@ -19,14 +20,24 @@ const messages = [{ role: "system", content: SYSTEM_PROMPT }];
 
 // Add a message bubble to the chat window.
 function addMessage(role, text) {
-  const messageEl = document.createElement("p");
+  const messageEl = document.createElement("article");
   messageEl.className = `msg ${role}`;
 
+  const labelEl = document.createElement("span");
+  labelEl.className = "msg-label";
+
+  const contentEl = document.createElement("span");
+  contentEl.className = "msg-content";
+  contentEl.textContent = text;
+
   if (role === "user") {
-    messageEl.textContent = `You: ${text}`;
+    labelEl.textContent = "You";
   } else {
-    messageEl.textContent = `Advisor: ${text}`;
+    labelEl.textContent = "L'Oreal Advisor";
   }
+
+  messageEl.appendChild(labelEl);
+  messageEl.appendChild(contentEl);
 
   chatWindow.appendChild(messageEl);
   chatWindow.scrollTop = chatWindow.scrollHeight;
@@ -71,6 +82,9 @@ chatForm.addEventListener("submit", async (e) => {
   if (!text) {
     return;
   }
+
+  // Always show only the newest user question above the response box.
+  latestQuestion.textContent = text;
 
   // Show the user's message in the UI.
   addMessage("user", text);

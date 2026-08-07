@@ -27,6 +27,11 @@
       <!------- Chat Area ------->
       <main>
         <section class="chatbox">
+          <p class="latest-question-label">Your question</p>
+          <p id="latestQuestion" class="latest-question-text">
+            Ask a question to begin.
+          </p>
+
           <div id="chatWindow" class="chat-window">
             <!-- messages will be appended here via JS -->
           </div>
@@ -46,6 +51,27 @@
               <span class="visually-hidden">Send</span>
             </button>
           </form>
+        </section>
+
+        <section class="beauty-showcase" aria-label="L'Oreal beauty visuals">
+          <h2>L'Oreal Beauty Favorites</h2>
+          <div class="showcase-grid">
+            <article class="showcase-card">
+              <img
+                src="img/loreal-makeup-brush.svg"
+                alt="Illustration of a L'Oreal makeup brush"
+              />
+              <p>Makeup Essentials</p>
+            </article>
+
+            <article class="showcase-card">
+              <img
+                src="img/loreal-skincare.svg"
+                alt="Illustration of L'Oreal skincare products"
+              />
+              <p>Skincare Essentials</p>
+            </article>
+          </div>
         </section>
       </main>
 
