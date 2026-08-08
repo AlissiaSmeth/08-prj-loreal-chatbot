@@ -36,15 +36,35 @@ body {
 }
 
 .page-wrapper {
+  position: relative;
   width: 90%;
   max-width: 900px;
   padding-bottom: 24px;
 }
 
+.top-makeup-bg {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(860px, 95%);
+  opacity: 0.18;
+  pointer-events: none;
+  z-index: 0;
+}
+
 /* header */
 .site-header {
+  position: relative;
+  z-index: 1;
   text-align: center;
   padding-top: 50px;
+}
+
+main,
+.site-footer {
+  position: relative;
+  z-index: 1;
 }
 
 .brand-logo {
