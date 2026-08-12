@@ -6,7 +6,7 @@ const sendBtn = document.getElementById("sendBtn");
 const latestQuestion = document.getElementById("latestQuestion");
 
 // Paste your class Cloudflare Worker URL from the README here.
-const WORKER_URL = "https://black-base-eb36.smetha1.workers.dev";
+const WORKER_URL = "https://loreal2ndpro.smetha1.workers.dev";
 
 // Use the model requested by the class project instructions.
 const MODEL_NAME = "gpt-4.1";
